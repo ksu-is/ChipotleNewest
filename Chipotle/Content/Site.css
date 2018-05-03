@@ -9,8 +9,13 @@
 /* navbar */
 
 .navbar-default {
-        color: rgba(172, 157, 145, 1);
-        background-color: rgba(83, 57, 46, 1);
+    color: rgba(172, 157, 145, 1);
+    background-color: rgba(83, 57, 46, 1);
+}
+
+.navbar {
+    font-family: 'Trade Gothic LT Std No. 18';
+    font-size: 30px;
 }
 
 body {
@@ -46,12 +51,12 @@ hr {
 }
 
     .jumbotron h1 {
-        color: white;
+        color: #FFFFFF;
         font-family: 'Trade Gothic LT Std No. 18';
     }
 
     .jumbotron p {
-        color: white;
+        color: #FFFFFF;
     }
 
 
