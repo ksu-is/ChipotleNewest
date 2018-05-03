@@ -15,9 +15,21 @@
 
 .navbar {
     font-family: 'Trade Gothic LT Std No. 18';
-    font-size: 30px;
+    font-size: 45px;
 }
 
+    .navbar text {
+        padding-top: 20px;
+    }
+
+
+.centered {
+    padding-top: 45px;
+}
+
+.login {
+    font-size: 20px;
+}
 
 
 body {
@@ -44,9 +56,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 hr {
-    background-color: #006A40;
-    border-color: #006A40;
-    color: #006A40;
+    background-color: #A81512;
+    border-color: #A81512;
+    color: #A81512;
     height: 2px;
     border: 0;
 }

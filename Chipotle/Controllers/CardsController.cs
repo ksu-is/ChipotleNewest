@@ -53,7 +53,7 @@ namespace Chipotle.Controllers
             {
                 db.Cards.Add(card);
                 db.SaveChanges();
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("About", "Home");
             }
 
             return View(card);
