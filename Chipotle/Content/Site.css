@@ -7,8 +7,10 @@
 
 
 /* navbar */
+
 .navbar-default {
-    background-color: #343233;
+        color: rgba(172, 157, 145, 1);
+        background-color: rgba(83, 57, 46, 1);
 }
 
 body {
@@ -16,7 +18,7 @@ body {
 }
 
 .text {
-    color: #006A40;
+    color: #FFFFFF;
 }
 
 .dropdown {
@@ -34,12 +36,18 @@ hr {
 }
 
 
+
+
 .jumbotron {
-    background-image: url('../Images/banner3.png');
+    position: relative;
+    background: url('Images/background.jpg') no-repeat center center;
+    height: 50vh;
+    background-size: 100% 100%;
 }
 
     .jumbotron h1 {
         color: white;
+        font-family: 'Trade Gothic LT Std No. 18';
     }
 
     .jumbotron p {
@@ -103,3 +111,4 @@ textarea {
     src: url(../fonts/TradeGothicLTStd.otf); /*if IE */
     src: local("TradeGothicLTStd"), url("../fonts/TradeGothicLTStd.otf") format("opentype"); /* non-IE */
 }
+
