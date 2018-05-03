@@ -1,0 +1,108 @@
+﻿@model Chipotle.Models.Order
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FormFactor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FormFactor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Beans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Beans)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Protein)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Protein)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lettuce)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lettuce)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cheese)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cheese)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quacamole)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quacamole)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SourCream)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SourCream)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HotSauce)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HotSauce)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MildSauce)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MildSauce)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalsaVerde)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalsaVerde)
+        </dd>
+
+        
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,278 @@
+﻿@model Chipotle.Models.Order
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Order</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.FormFactor, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @{
+                List<SelectListItem> FormFactors = new List<SelectListItem>();
+                FormFactors.Add(new SelectListItem
+                {
+                    Text = "Bowl",
+                    Value = "Bowl",
+                    Selected = true
+                });
+                FormFactors.Add(new SelectListItem
+                {
+                    Text = "Burrito",
+                    Value = "Burrito"
+                });
+                FormFactors.Add(new SelectListItem
+                {
+                    Text = "Salad",
+                    Value = "Salad"
+                });
+            }
+            @Html.DropDownListFor(model => model.FormFactor, FormFactors, "-- Select Base --")
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Rice, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @{
+                List<SelectListItem> Rices = new List<SelectListItem>();
+                Rices.Add(new SelectListItem
+                {
+                    Text = "Brown",
+                    Value = "Brown",
+                    Selected = true
+                });
+                Rices.Add(new SelectListItem
+                {
+                    Text = "White",
+                    Value = "White"
+                });
+            }
+            @Html.DropDownListFor(model => model.Rice, Rices, "-- Select Rice --")
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Beans, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @{
+                List<SelectListItem> BeanTypes = new List<SelectListItem>();
+                BeanTypes.Add(new SelectListItem
+                {
+                    Text = "Black",
+                    Value = "Black",
+                    Selected = true
+                });
+                BeanTypes.Add(new SelectListItem
+                {
+                    Text = "Pinto",
+                    Value = "Pinto"
+                });
+            }
+            @Html.DropDownListFor(model => model.Beans, BeanTypes, "-- Select Beans --")
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Protein, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @{
+                List<SelectListItem> ProteinTypes = new List<SelectListItem>();
+                ProteinTypes.Add(new SelectListItem
+                {
+                    Text = "Steak",
+                    Value = "Steak",
+                    Selected = true
+                });
+                ProteinTypes.Add(new SelectListItem
+                {
+                    Text = "Chicken",
+                    Value = "Chicken"
+                });
+                ProteinTypes.Add(new SelectListItem
+                {
+                    Text = "Carnitas",
+                    Value = "Carnitas"
+                });
+                ProteinTypes.Add(new SelectListItem
+                {
+                    Text = "Barbacoa",
+                    Value = "Barbacoa"
+                });
+                ProteinTypes.Add(new SelectListItem
+                {
+                    Text = "Sofritas",
+                    Value = "Sofritas"
+                });
+            }
+            @Html.DropDownListFor(model => model.Protein, ProteinTypes, "-- Select protein --")
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Lettuce, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @{
+                List<SelectListItem> LettuceOption = new List<SelectListItem>();
+                LettuceOption.Add(new SelectListItem
+                {
+                    Text = "Yes",
+                    Value = "Yes",
+                    Selected = true
+                });
+                LettuceOption.Add(new SelectListItem
+                {
+                    Text = "No",
+                    Value = "No"
+                });
+            }
+            @Html.DropDownListFor(model => model.Lettuce, LettuceOption, "-- Select Lettuce --")
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Cheese, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @{
+                List<SelectListItem> CheeseOption = new List<SelectListItem>();
+                CheeseOption.Add(new SelectListItem
+                {
+                    Text = "Yes",
+                    Value = "Yes",
+                    Selected = true
+                });
+                CheeseOption.Add(new SelectListItem
+                {
+                    Text = "No",
+                    Value = "No"
+                });
+            }
+            @Html.DropDownListFor(model => model.Cheese, CheeseOption, "-- Select Cheese --")
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Quacamole, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @{
+                List<SelectListItem> QuacamoleOption = new List<SelectListItem>();
+                QuacamoleOption.Add(new SelectListItem
+                {
+                    Text = "Yes",
+                    Value = "Yes",
+                    Selected = true
+                });
+                QuacamoleOption.Add(new SelectListItem
+                {
+                    Text = "No",
+                    Value = "No"
+                });
+            }
+            @Html.DropDownListFor(model => model.Quacamole, QuacamoleOption, "-- Select Quacamole --")
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.SourCream, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @{
+                List<SelectListItem> SourCreamOption = new List<SelectListItem>();
+                SourCreamOption.Add(new SelectListItem
+                {
+                    Text = "Yes",
+                    Value = "Yes",
+                    Selected = true
+                });
+                SourCreamOption.Add(new SelectListItem
+                {
+                    Text = "No",
+                    Value = "No"
+                });
+            }
+            @Html.DropDownListFor(model => model.SourCream, SourCreamOption, "-- Select SourCream --")
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.HotSauce, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @{
+                List<SelectListItem> HotSauceOption = new List<SelectListItem>();
+                HotSauceOption.Add(new SelectListItem
+                {
+                    Text = "Yes",
+                    Value = "Yes",
+                    Selected = true
+                });
+                HotSauceOption.Add(new SelectListItem
+                {
+                    Text = "No",
+                    Value = "No"
+                });
+            }
+            @Html.DropDownListFor(model => model.HotSauce, HotSauceOption, "-- Select SourCream --")
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.SalsaVerde, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @{
+            List<SelectListItem> SalsaVerdeOption = new List<SelectListItem>();
+            SalsaVerdeOption.Add(new SelectListItem
+            {
+                Text = "Yes",
+                Value = "Yes",
+                Selected = true
+            });
+            SalsaVerdeOption.Add(new SelectListItem
+            {
+                Text = "No",
+                Value = "No"
+            });
+            }
+            @Html.DropDownListFor(model => model.SalsaVerde, SalsaVerdeOption, "-- Select SalsaVerde--")
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.MildSauce, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @{
+                List<SelectListItem> MildSauceOption = new List<SelectListItem>();
+                MildSauceOption.Add(new SelectListItem
+                {
+                    Text = "Yes",
+                    Value = "Yes",
+                    Selected = true
+                });
+                MildSauceOption.Add(new SelectListItem
+                {
+                    Text = "No",
+                    Value = "No"
+                });
+            }
+            @Html.DropDownListFor(model => model.MildSauce, MildSauceOption, "-- Select MildSauce--")
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+    }
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }

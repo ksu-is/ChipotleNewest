@@ -1,0 +1,114 @@
+﻿@model Chipotle.Models.Order
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FormFactor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FormFactor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Beans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Beans)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Protein)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Protein)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lettuce)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lettuce)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cheese)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cheese)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quacamole)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quacamole)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SourCream)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SourCream)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HotSauce)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HotSauce)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MildSauce)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MildSauce)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalsaVerde)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalsaVerde)
+        </dd>
+
+        
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
