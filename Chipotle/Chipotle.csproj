@@ -246,6 +246,7 @@
     <Content Include="Content\Images\BarbacoaImg.png" />
     <Content Include="Content\Images\CarnitasImg.png" />
     <Content Include="Content\Images\ChickenImg.png" />
+    <Content Include="Content\Images\Chipotle_Logo.png" />
     <Content Include="Content\Images\FajitaVegImg.png" />
     <Content Include="Content\Images\SofritasImg.png" />
     <Content Include="Content\Images\SteakImg.png" />
